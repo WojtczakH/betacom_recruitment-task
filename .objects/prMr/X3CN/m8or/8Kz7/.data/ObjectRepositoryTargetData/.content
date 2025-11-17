@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="QYXpAfEIlE6jVIRAyTxiQA" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/8Kz7fx_ZSkyZ_8R4q4TKeQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="wyszukiwarka-krs.ms.gov.pl" CVScreenId="0c7af29e-76bf-49a2-b492-2dc21e48f09d" CvTextArea="168, 560, 77, 12" CvType="Text" DesignTimeRectangle="169, 1132, 75, 18" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' aaname='&quot;+in_TransactionItem.SpecificContent(&quot;KRSNumber&quot;).ToString+&quot;' /&gt;&quot;]" Guid="2a7d857e-1867-4c9b-915e-bc750b65dffc" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="e766dd11cf7a59e4f2207d68e50403a2.png" xmlns="">0HaIUmqvd50CEysipPrY-IQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

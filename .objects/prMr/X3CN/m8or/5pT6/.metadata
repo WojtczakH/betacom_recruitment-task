@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Wyszukaj",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "5pT6rilLc0GjhTl-PgPw5w",
+  "Reference": "TuqTgN2Q2UOEIYUA0pIKgQ/5pT6rilLc0GjhTl-PgPw5w",
+  "ParentRef": "TuqTgN2Q2UOEIYUA0pIKgQ/m8orRDyEi0aNAXK8Gpqx1A",
+  "Created": "2025-11-12T22:39:31.3454789Z",
+  "Updated": "2025-11-12T22:39:31.3454789Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="MCXkgYIQqU6c97pHQGvnag" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/H9OmCksbhkaFueW4VqsvKQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="krz.ms.gov.pl" CVScreenId="4436df32-afcd-465c-984f-291080125949" DesignTimeRectangle="1252, 630, 89, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl parentid='butoonWyszukajMobile' tag='SPAN' type='' class='ui-button-text ui-clickable' aaname='Wyszukaj' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e8fa1d9e-fd50-4306-b9b9-3cd86dc7903f" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Wyszukiwanie podmiotów' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="04bed715-5990-4a03-91a3-e1b4e629657b" CvElementArea="1153, 629, 84, 35" CvTextArea="1168, 639, 52, 16" CvTextArgument="Wyczyść" CvType="Button" DesignTimeRectangle="1155, 630, 79, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl idx='2' tag='IFRAME' /&gt;&lt;webctrl parentid='butoonWyczyscMobile' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl parentid='butoonWyczyscMobile' tag='SPAN' type='' class='ui-button-text ui-clickable' aaname='Wyczyść' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Wyczyść' /&gt;" Guid="fd0e6f86-a32b-45b4-b81c-a183758897d9" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="88266a4ec7bb9805f969d23ea6d09c4d.png" xmlns="">0DTGFl8SsW0ObZStSL5AnOA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

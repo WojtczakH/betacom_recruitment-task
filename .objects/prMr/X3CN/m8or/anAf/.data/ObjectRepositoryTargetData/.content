@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="9Wa9dD8cCk29viLz-8eZiQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="wyszukiwarka-krs.ms.gov.pl/dane-szczegolowe-podmiotu;numerKRS=0Qk1aZoqFcGKHlpSLFfmkA%3D%3D;typ=P" CVScreenId="5b302647-4f22-4c3a-894e-678bfe2c1224" DesignTimeRectangle="349, 640, 586, 34" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' class='p-col-7 p-md-9 border ng-star-inserted' isleaf='1' tag='DIV' matching:class='fuzzy' fuzzylevel:class='0.0' matching:isleaf='fuzzy' fuzzylevel:isleaf='0.0' /&gt;" Guid="8de232f5-dd0a-4bf2-88af-b106e0658ac8" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="5b302647-4f22-4c3a-894e-678bfe2c1224" DesignTimeRectangle="154, 640, 195, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Forma prawna' tag='DIV' /&gt;" Guid="66ca1428-82b2-4617-9bce-2813fa461aec" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="98c133cdd45495d11c3cb165433b4e03.png" xmlns="">0Y9lWR6isM0-VGiwsE8cHCA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

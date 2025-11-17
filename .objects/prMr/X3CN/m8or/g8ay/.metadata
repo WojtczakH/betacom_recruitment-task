@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Numer KRS",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "g8ayjws0P06hm4N5fHvURw",
+  "Reference": "TuqTgN2Q2UOEIYUA0pIKgQ/g8ayjws0P06hm4N5fHvURw",
+  "ParentRef": "TuqTgN2Q2UOEIYUA0pIKgQ/m8orRDyEi0aNAXK8Gpqx1A",
+  "Created": "2025-11-12T22:23:52.0126575Z",
+  "Updated": "2025-11-12T22:23:52.0126575Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

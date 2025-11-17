@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="SyYE1wt96UWR3i6ewFbJLw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="prs.ms.gov.pl" CVScreenId="1b8643b6-40f4-4cdb-b40c-90280a31be7f" CvElementArea="505, 958, 323, 46" CvTextArea="635, 974, 64, 17" CvTextArgument="Akceptuję" CvType="Button" DesignTimeRectangle="507, 959, 320, 44" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Akceptuję' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Akceptuję' tag='BUTTON' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Akceptuję' /&gt;" Guid="01cf286c-5a7a-4fa7-b12a-78a1c0928495" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal Rejestrów Sądowych' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="273146c13b657a122e557d2ce3150306.png" xmlns="">0BOu5U34lfUmTWA_O9qRzLQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

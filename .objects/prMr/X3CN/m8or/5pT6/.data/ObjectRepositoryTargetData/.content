@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="0cVii4mB4EWtlYFfnRPktw" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/5pT6rilLc0GjhTl-PgPw5w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="wyszukiwarka-krs.ms.gov.pl" CVScreenId="d0d48922-359f-440c-b253-ad5bfbe425de" CvElementArea="660, 612, 123, 35" CvTextArea="690, 623, 62, 16" CvTextArgument="Wyszukaj" CvType="Button" DesignTimeRectangle="662, 614, 120, 32" ElementType="Button" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aaname='Wyszukaj' type='button' tag='BUTTON' class='w-100 p-button p-component p-ripple' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Wyszukaj' /&gt;" Guid="23e27eba-e13d-4cc5-856d-1adcf11d5d4e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Interactive]">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target CVScreenId="d0d48922-359f-440c-b253-ad5bfbe425de" CvElementArea="660, 612, 123, 35" CvTextArea="690, 623, 62, 16" CvTextArgument="Wyszukaj" CvType="Button" DesignTimeRectangle="678, 622, 88, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Wyszukaj' type='' tag='SPAN' class='p-button-label ng-star-inserted' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Wyszukaj' /&gt;" Guid="f009fe63-7d79-42ef-8721-984e379b5cf5" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="b28299f5dbc920f8d14df19b362909c2.png" xmlns="">0WO0Rw700OEuuz1dP-f7V1w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

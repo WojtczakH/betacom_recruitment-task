@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Fm8fSHAufUimC-sf29vhXA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="krz.ms.gov.pl" CVScreenId="cb216e89-8d6c-4da8-83cd-9d39528a9c37" CvTextArea="884, 462, 105, 19" CvTextArgument="Użytkowniku," CvType="Text" DesignTimeRectangle="885, 458, 468, 25" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='leading-text' tag='DIV' /&gt;" Guid="616dd907-7a11-44d3-a6d5-f42985b36c12" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Strona główna' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="cb216e89-8d6c-4da8-83cd-9d39528a9c37" CvTextArea="920, 521, 60, 17" CvTextArgument="cookies," CvType="Text" DesignTimeRectangle="920, 518, 56, 22" FuzzySelectorArgument="&lt;webctrl tag='EM' type='' class='' aaname='cookies' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='cookies' /&gt;" Guid="628de0ca-04ac-421c-b8ac-2501a40a2fe2" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="5062b8c4431412a0caf5b3de559dce17.png" xmlns="">0rxM-Cw8Te060AOYm5KQU_Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

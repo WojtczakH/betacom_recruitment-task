@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Portal publiczny KRZ - Strona główna",
+  "Type": "Screen",
+  "Id": "LfXNBFbq2UaIxNLel0boyw",
+  "Reference": "TuqTgN2Q2UOEIYUA0pIKgQ/LfXNBFbq2UaIxNLel0boyw",
+  "ParentRef": "TuqTgN2Q2UOEIYUA0pIKgQ/-crzVq-r9EuzH3G61Jkw8g",
+  "Created": "2025-11-13T13:08:31.3023549Z",
+  "Updated": "2025-11-13T13:08:31.3023549Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

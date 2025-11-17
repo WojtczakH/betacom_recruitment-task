@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Akceptuję",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "pjZEIdR6C0-P6YhGnrmBkw",
+  "Reference": "TuqTgN2Q2UOEIYUA0pIKgQ/pjZEIdR6C0-P6YhGnrmBkw",
+  "ParentRef": "TuqTgN2Q2UOEIYUA0pIKgQ/m8orRDyEi0aNAXK8Gpqx1A",
+  "Created": "2025-11-12T22:06:25.8940744Z",
+  "Updated": "2025-11-12T22:06:25.8940744Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

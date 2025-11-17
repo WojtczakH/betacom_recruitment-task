@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="GlMEHVQ-F0SIoUhqDCcZXg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="cloud.uipath.com/robot543245company/DefaultTenant/orchestrator_/queues/1160442/transactions" CVScreenId="2d1bc8bc-adfa-47a6-b32b-dfe0a50a8c3e" CvElementArea="169, 646, 18, 18" CvType="CheckBox" DesignTimeRectangle="169, 646, 18, 18" ElementType="CheckBox" ElementVisibilityArgument="Interactive" Guid="c732c7c2-954d-4464-a25a-32488b6bcf1e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Transactions - UiPath Orchestrator' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="2d1bc8bc-adfa-47a6-b32b-dfe0a50a8c3e" CvTextArea="197, 647, 99, 17" CvTextArgument="Przedsiębiorcy" CvType="Text" DesignTimeRectangle="197, 647, 99, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='ng-star-inserted p-checkbox-label' aaname='Przedsiębiorcy' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Przedsiębiorcy' /&gt;" Guid="df42dba7-82a6-47d3-a662-56a0482ae02a" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="d1bbd825c3017edcde74997ca8e33e86.png" xmlns="">0mJQEi1AUXEiwUsQqfce5ZA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Check</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

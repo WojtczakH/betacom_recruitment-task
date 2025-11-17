@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="0zCMXEOW3kijhz2HUWwHzA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="prs.ms.gov.pl" CVScreenId="609772f2-6c86-44e6-85a8-56b7f3e05aa8" DesignTimeRectangle="483, 730, 368, 297" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' tag='DIV' class='p-flex p-flex-column cookies-msg ng-star-inserted' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="b92ebf81-0e27-45d4-81df-b5b9ae27c13c" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal Rejestrów Sądowych' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="1ee2c4921192fb9394e3bd38d1202210.png" xmlns="">022pFVmMyBEuOOjpNhF2CnQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,6 @@
+{
+  "Name": "Betacom_Zadanie_Rekrutacyjne",
+  "ProjectType": "Process",
+  "Description": "Na podstawie pliku wejściowego zawierającego numery KRS podmiotów publicznych robot ma za zadanie sprawdzenia czy są prowadzone przeciwko nim postępowania następnie zebrane informacje zapisać w pliku wynikowym (plik Excel). \r\n",
+  "MainFile": "Main.xaml"
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Określ rodzaj rejestru",
+  "Type": "Element",
+  "Id": "8XJVes3CMkaUer-CP8L3qA",
+  "Reference": "TuqTgN2Q2UOEIYUA0pIKgQ/8XJVes3CMkaUer-CP8L3qA",
+  "ParentRef": "TuqTgN2Q2UOEIYUA0pIKgQ/m8orRDyEi0aNAXK8Gpqx1A",
+  "Created": "2025-11-12T22:13:27.9493834Z",
+  "Updated": "2025-11-12T22:13:27.9493834Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

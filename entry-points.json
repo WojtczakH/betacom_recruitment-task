@@ -1,0 +1,22 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "d01677b0-ec8a-43e7-88ce-7437e15c90bd",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_OrchestratorQueueName": {
+            "type": "string"
+          },
+          "in_OrchestratorQueueFolder": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  ]
+}

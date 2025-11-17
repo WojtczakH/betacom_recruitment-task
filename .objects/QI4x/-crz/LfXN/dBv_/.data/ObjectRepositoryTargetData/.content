@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="2J9j0O3F0U2WRIcbOjKdvg" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/dBv_kd1mB0q1Q3AIndTeTw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="krz.ms.gov.pl" DesignTimeRectangle="516, 590, 300, 129" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl aaname='Wyszukiwanie podmiotów i przeglądanie postępowań' class='btn-desktop' tag='A' /&gt;" Guid="f046350f-b52f-46b6-b5e5-f154c19cf789" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Strona główna' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6d0a35fd0020f8385c5eb9d9c78bd062.png" xmlns="">0C_4-1oJCh0Cr4VDQJbUoMw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Nie zostały znalezione …",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "WboupbI0rk2I84F2rgQIbg",
+  "Reference": "TuqTgN2Q2UOEIYUA0pIKgQ/WboupbI0rk2I84F2rgQIbg",
+  "ParentRef": "TuqTgN2Q2UOEIYUA0pIKgQ/LfXNBFbq2UaIxNLel0boyw",
+  "Created": "2025-11-13T13:57:55.7035251Z",
+  "Updated": "2025-11-13T13:57:55.7035251Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

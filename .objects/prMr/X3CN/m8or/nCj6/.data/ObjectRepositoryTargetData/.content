@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="x59zfAdssUi0s4achHmg8Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="wyszukiwarka-krs.ms.gov.pl/dane-szczegolowe-podmiotu;numerKRS=0Qk1aZoqFcGKHlpSLFfmkA%3D%3D;typ=P" CVScreenId="5b302647-4f22-4c3a-894e-678bfe2c1224" DesignTimeRectangle="349, 606, 586, 34" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='\d{14}' matching:aaname='regex' tag='DIV' /&gt;" Guid="ba0afc05-387f-4b29-8945-b6b6ee03f8d6" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="5b302647-4f22-4c3a-894e-678bfe2c1224" DesignTimeRectangle="154, 606, 195, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='REGON' tag='DIV' /&gt;" Guid="a7a32b4a-c249-45c9-bae3-81a0584e69b9" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="9c88efd00b757b84536aea4afec2a428.png" xmlns="">0u0bpUymfy02qBYICqxehlw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

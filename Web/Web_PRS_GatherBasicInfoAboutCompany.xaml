@@ -1,0 +1,432 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Web_PRS_GatherBasicInfoAboutCompany" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
+    <x:Property Name="strNazwaPodmiotu" Type="InOutArgument(x:String)" />
+    <x:Property Name="strNIP" Type="InOutArgument(x:String)" />
+    <x:Property Name="strREGON" Type="InOutArgument(x:String)" />
+    <x:Property Name="strFormaPrawna" Type="InOutArgument(x:String)" />
+    <x:Property Name="strDataWpisu" Type="InOutArgument(x:String)" />
+  </x:Members>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="1207,2680" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Open &quot;Portal Rejestrow Sadowych&quot; page" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="914,2657" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="b351668c-6c4f-4c24-89b1-1a298e23ceb8" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="912,2463" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Korzystamy z plików coo…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="878,57" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="b351668c-6c4f-4c24-89b1-1a298e23ceb8" Timeout="2" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,278" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Akceptuję'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b351668c-6c4f-4c24-89b1-1a298e23ceb8" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="prs.ms.gov.pl" CVScreenId="1b8643b6-40f4-4cdb-b40c-90280a31be7f" ContentHash="SyYE1wt96UWR3i6ewFbJLw" CvElementArea="505, 958, 323, 46" CvTextArea="635, 974, 64, 17" CvTextArgument="Akceptuję" CvType="Button" DesignTimeRectangle="507, 959, 320, 44" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Akceptuję' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Akceptuję' tag='BUTTON' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Akceptuję' /&gt;" Guid="01cf286c-5a7a-4fa7-b12a-78a1c0928495" InformativeScreenshot="273146c13b657a122e557d2ce3150306.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/pjZEIdR6C0-P6YhGnrmBkw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal Rejestrów Sądowych' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,228" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Accept cookies wnd does not appear&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="prs.ms.gov.pl" CVScreenId="609772f2-6c86-44e6-85a8-56b7f3e05aa8" ContentHash="0zCMXEOW3kijhz2HUWwHzA" DesignTimeRectangle="483, 730, 368, 297" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' tag='DIV' class='p-flex p-flex-column cookies-msg ng-star-inserted' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="b92ebf81-0e27-45d4-81df-b5b9ae27c13c" InformativeScreenshot="1ee2c4921192fb9394e3bd38d1202210.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/cOXu82NtEkqowedFQXjbQw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal Rejestrów Sądowych' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Complete" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NCheckState DisplayName="Check App State 'Określ rodzaj rejestru'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="878,2346" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="b351668c-6c4f-4c24-89b1-1a298e23ceb8" Timeout="2" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="876,1971" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Parallel sap:VirtualizedContainerService.HintSize="842,293" sap2010:WorkflowViewState.IdRef="Parallel_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="[UiPath.UIAutomationNext.Enums.NClickMode.None]" ClipboardMode="Never" DisplayName="Type Into 'Numer KRS'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="374,214" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="b351668c-6c4f-4c24-89b1-1a298e23ceb8" Text="[in_TransactionItem.SpecificContent(&quot;KRSNumber&quot;).ToString]" Version="V5">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="wyszukiwarka-krs.ms.gov.pl" CVScreenId="cc8f0228-5dee-444c-aca8-8fb0c330d074" CvElementArea="169, 812, 396, 36" CvType="InputBox" DesignTimeRectangle="170, 813, 395, 34" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='36479305' matching:id='fuzzy' fuzzylevel:id='0.0' tag='INPUT' type='text' class='w-100 p-inputtext p-component ng-untouched ng-pristine ng-valid' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Numer KRS' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a100a36f-0c44-434e-918e-e182999cc9ab" InformativeScreenshot="a1e18814b076dda3e7bb2bbc5ee1e6d0.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="cc8f0228-5dee-444c-aca8-8fb0c330d074" CvTextArea="169, 794, 66, 12" CvTextArgument="Numer KRS" CvType="Text" DesignTimeRectangle="170, 793, 395, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='ds-input-label' tag='LABEL' type='' aaname='Numer KRS' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Numer KRS' /&gt;" Guid="27c9449d-74d6-4499-adf4-c8808f17b5bd" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Przedsiębiorcy'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="374,214" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="b351668c-6c4f-4c24-89b1-1a298e23ceb8" Version="V5">
+                      <uix:NCheck.Target>
+                        <uix:TargetAnchorable BrowserURL="cloud.uipath.com/robot543245company/DefaultTenant/orchestrator_/queues/1160442/transactions" CVScreenId="2d1bc8bc-adfa-47a6-b32b-dfe0a50a8c3e" ContentHash="GlMEHVQ-F0SIoUhqDCcZXg" CvElementArea="169, 646, 18, 18" CvType="CheckBox" DesignTimeRectangle="169, 646, 18, 18" ElementType="CheckBox" ElementVisibilityArgument="Interactive" Guid="c732c7c2-954d-4464-a25a-32488b6bcf1e" InformativeScreenshot="d1bbd825c3017edcde74997ca8e33e86.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/kXIk7ax2MUqiyAtjske33w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Transactions - UiPath Orchestrator' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V6" WaitForReadyArgument="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="2d1bc8bc-adfa-47a6-b32b-dfe0a50a8c3e" CvTextArea="197, 647, 99, 17" CvTextArgument="Przedsiębiorcy" CvType="Text" DesignTimeRectangle="197, 647, 99, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='ng-star-inserted p-checkbox-label' aaname='Przedsiębiorcy' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Przedsiębiorcy' /&gt;" Guid="df42dba7-82a6-47d3-a662-56a0482ae02a" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NCheck.Target>
+                    </uix:NCheck>
+                  </Parallel>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Wyszukaj'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="842,194" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b351668c-6c4f-4c24-89b1-1a298e23ceb8" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="wyszukiwarka-krs.ms.gov.pl" CVScreenId="d0d48922-359f-440c-b253-ad5bfbe425de" ContentHash="WwilOW88f06I5eRMmMxazw" CvElementArea="660, 612, 123, 35" CvTextArea="690, 623, 62, 16" CvTextArgument="Wyszukaj" CvType="Button" DesignTimeRectangle="662, 614, 120, 32" ElementType="Button" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aaname='Wyszukaj' type='button' tag='BUTTON' class='w-100 p-button p-component p-ripple' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Wyszukaj' /&gt;" Guid="23e27eba-e13d-4cc5-856d-1adcf11d5d4e" InformativeScreenshot="b28299f5dbc920f8d14df19b362909c2.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/5pT6rilLc0GjhTl-PgPw5w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Interactive]">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="d0d48922-359f-440c-b253-ad5bfbe425de" CvElementArea="660, 612, 123, 35" CvTextArea="690, 623, 62, 16" CvTextArgument="Wyszukaj" CvType="Button" DesignTimeRectangle="678, 622, 88, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Wyszukaj' type='' tag='SPAN' class='p-button-label ng-star-inserted' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Wyszukaj' /&gt;" Guid="f009fe63-7d79-42ef-8721-984e379b5cf5" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NCheckState DisplayName="Check App State 'Wyniki wyszukiwania - 1'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="842,888" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="b351668c-6c4f-4c24-89b1-1a298e23ceb8" Version="V5">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,245" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'KRSNumber' found on the page" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b351668c-6c4f-4c24-89b1-1a298e23ceb8" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="wyszukiwarka-krs.ms.gov.pl" CVScreenId="0c7af29e-76bf-49a2-b492-2dc21e48f09d" ContentHash="w5GmO8jw5EmMFc7SrTQsbA" CvTextArea="168, 560, 77, 12" CvType="Text" DesignTimeRectangle="169, 1132, 75, 18" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' aaname='&quot;+in_TransactionItem.SpecificContent(&quot;KRSNumber&quot;).ToString+&quot;' /&gt;&quot;]" Guid="2a7d857e-1867-4c9b-915e-bc750b65dffc" InformativeScreenshot="e766dd11cf7a59e4f2207d68e50403a2.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/8Kz7fx_ZSkyZ_8R4q4TKeQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,349" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;KRSNumber not found&quot;]" />
+                        <Throw DisplayName="Throw BE" Exception="[New BusinessRuleException(&quot;Numer KRS nie istnieje&quot;)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="wyszukiwarka-krs.ms.gov.pl" CVScreenId="0df7053a-81b5-4b7a-ba3e-d0c1d0cc4c62" ContentHash="H8-NFgiO0k-GtN0grIhA0A" DesignTimeRectangle="153, 398, 206, 24" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' class='ds-panel-header' tag='DS-PANEL-HEADER' aaname='Wyniki wyszukiwania  - 1' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Wyniki wyszukiwania - 1' /&gt;" Guid="9c665b03-907a-4d52-825c-6f264f404801" InformativeScreenshot="ea3544a1b2ea5a48bcea9d496ca69458.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/-j6ls2W580SkoTlnXAMAdw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                  <uix:NCheckState DisplayName="Check App State 'Wyszukiwarka KRS'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="842,536" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="b351668c-6c4f-4c24-89b1-1a298e23ceb8" Version="V5">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Parallel DisplayName="Parallel Odczytaj dane szczegolowe" sap:VirtualizedContainerService.HintSize="1964,190" sap2010:WorkflowViewState.IdRef="Parallel_2">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NGetText DisplayName="Get Text strNazwaPodmiotu" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="374,111" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="b351668c-6c4f-4c24-89b1-1a298e23ceb8" ScrapingMethod="Fulltext" TextString="[strNazwaPodmiotu]" Version="V5">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="cloud.uipath.com/robot543245company/DefaultTenant/orchestrator_/queues/1160442/transactions(sidepanel:sidepanel/transactions/721271161/details)" CVScreenId="f7b7f7f3-0b52-483f-93ff-d51e93cfef08" CvType="AnyWordGroup" DesignTimeRectangle="349, 470, 586, 34" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' class='p-col-7 p-md-9 border ng-star-inserted' isleaf='1' tag='DIV' matching:class='fuzzy' fuzzylevel:class='0.0' matching:isleaf='fuzzy' fuzzylevel:isleaf='0.0' /&gt;" Guid="1e861c2e-5876-4c3b-85ae-97a826ef25d2" InformativeScreenshot="8bc811207b853a16d62e14bac82a1b17.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="f7b7f7f3-0b52-483f-93ff-d51e93cfef08" DesignTimeRectangle="154, 470, 195, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Nazwa' tag='DIV' /&gt;" Guid="9b0c9836-a6d1-47d8-906a-ee9f91352134" SearchSteps="Selector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                          <uix:NGetText DisplayName="Get Text strNIP" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="374,111" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="b351668c-6c4f-4c24-89b1-1a298e23ceb8" ScrapingMethod="Fulltext" TextString="[strNIP]" Version="V5">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="wyszukiwarka-krs.ms.gov.pl/dane-szczegolowe-podmiotu;numerKRS=0Qk1aZoqFcGKHlpSLFfmkA%3D%3D;typ=P" CVScreenId="9556a7ab-b367-4237-bc66-b0c8d5441b06" CvType="AnyWordGroup" DesignTimeRectangle="349, 431, 586, 34" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='\d{11}'  matching:aaname='regex' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' type='' class='p-col-7 p-md-9 border ng-star-inserted' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="f762fdd9-083c-4f35-b4d2-b109094256b6" InformativeScreenshot="b978605b51c92143fa30fe8e6a981e6b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="9556a7ab-b367-4237-bc66-b0c8d5441b06" DesignTimeRectangle="154, 431, 195, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='NIP' tag='DIV' /&gt;" Guid="6769ce79-e78c-41a1-b1c9-f4ecaec2ed29" SearchSteps="Selector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                          <uix:NGetText DisplayName="Get Text strREGON" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="374,111" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="b351668c-6c4f-4c24-89b1-1a298e23ceb8" ScrapingMethod="Fulltext" TextString="[strREGON]" Version="V5">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="wyszukiwarka-krs.ms.gov.pl/dane-szczegolowe-podmiotu;numerKRS=0Qk1aZoqFcGKHlpSLFfmkA%3D%3D;typ=P" CVScreenId="5b302647-4f22-4c3a-894e-678bfe2c1224" ContentHash="x59zfAdssUi0s4achHmg8Q" DesignTimeRectangle="349, 606, 586, 34" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='\d{14}' matching:aaname='regex' tag='DIV' /&gt;" Guid="ba0afc05-387f-4b29-8945-b6b6ee03f8d6" InformativeScreenshot="9c88efd00b757b84536aea4afec2a428.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/nCj6BPO4g0OmHErvjmLF1Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="5b302647-4f22-4c3a-894e-678bfe2c1224" DesignTimeRectangle="154, 606, 195, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='REGON' tag='DIV' /&gt;" Guid="a7a32b4a-c249-45c9-bae3-81a0584e69b9" SearchSteps="Selector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                          <uix:NGetText DisplayName="Get Text strFormaPrawna" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="374,111" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="b351668c-6c4f-4c24-89b1-1a298e23ceb8" ScrapingMethod="Fulltext" TextString="[strFormaPrawna]" Version="V5">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="wyszukiwarka-krs.ms.gov.pl/dane-szczegolowe-podmiotu;numerKRS=0Qk1aZoqFcGKHlpSLFfmkA%3D%3D;typ=P" CVScreenId="5b302647-4f22-4c3a-894e-678bfe2c1224" ContentHash="9Wa9dD8cCk29viLz-8eZiQ" DesignTimeRectangle="349, 640, 586, 34" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' class='p-col-7 p-md-9 border ng-star-inserted' isleaf='1' tag='DIV' matching:class='fuzzy' fuzzylevel:class='0.0' matching:isleaf='fuzzy' fuzzylevel:isleaf='0.0' /&gt;" Guid="8de232f5-dd0a-4bf2-88af-b106e0658ac8" InformativeScreenshot="98c133cdd45495d11c3cb165433b4e03.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/anAfhW3b3EGNlTBjneFE_w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="5b302647-4f22-4c3a-894e-678bfe2c1224" DesignTimeRectangle="154, 640, 195, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Forma prawna' tag='DIV' /&gt;" Guid="66ca1428-82b2-4617-9bce-2813fa461aec" SearchSteps="Selector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                          <uix:NGetText DisplayName="Get Text strDataWpisu" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="374,111" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="b351668c-6c4f-4c24-89b1-1a298e23ceb8" ScrapingMethod="Fulltext" TextString="[strDataWpisu]" Version="V5">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="wyszukiwarka-krs.ms.gov.pl/dane-szczegolowe-podmiotu;numerKRS=0Qk1aZoqFcGKHlpSLFfmkA%3D%3D;typ=P" CVScreenId="2d1f3107-50fe-4dfa-98d8-ac2ef17a683c" ContentHash="eY0f-66BjkqIRO4Yi3IRhg" CvElementArea="347, 481, 589, 50" CvType="InputBox" DesignTimeRectangle="349, 482, 586, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='DIV' type='' class='p-col-7 p-md-9 border ng-star-inserted' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="205f7209-8342-406f-98c9-ef494f31c241" InformativeScreenshot="ae548caf1467f65290934333732ab37d.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/pbDyUVxpf0aiK4bnp-hb0g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="154, 482, 195, 50" ElementType="Text" FuzzySelectorArgument="&lt;webctrl type='' class='p-col-5 p-md-3 title--bg-color border ng-star-inserted' isleaf='1' tag='DIV' aaname='Data wpisu do Rejestru Przedsiębiorców' matching:class='fuzzy' fuzzylevel:class='0.0' matching:isleaf='fuzzy' fuzzylevel:isleaf='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Data wpisu do Rejestru Przedsiębiorców' /&gt;" Guid="dd4514e2-cab7-44ff-8824-bc24f881540e" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                        </Parallel>
+                        <ui:LogMessage DisplayName="Log Message Values" sap:VirtualizedContainerService.HintSize="1964,166" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Values&quot; &amp; _&#xA;&quot;strNazwaPodmiotu [&quot;+strNazwaPodmiotu+&quot;]&quot; &amp; _&#xA;&quot;strNIP [&quot;+strNIP+&quot;]&quot; &amp; _&#xA;&quot;strREGON [&quot;+strREGON+&quot;]&quot; &amp; _&#xA;&quot;strFormaPrawna [&quot;+strFormaPrawna+&quot;]&quot; &amp; _&#xA;&quot;strDataWpisu [&quot;+strDataWpisu+&quot;]&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="zLog Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Tab 'Dane szczegolowe' not loaded&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="wyszukiwarka-krs.ms.gov.pl/dane-szczegolowe-podmiotu;numerKRS=0Qk1aZoqFcGKHlpSLFfmkA%3D%3D;typ=P" CVScreenId="30ec899b-e5dd-499e-9838-d7049e0d2d9e" ContentHash="hUTu2_JEH0WMViMzzYjnew" DesignTimeRectangle="136, 334, 1095, 24" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='' aaname='Dane szczegółowe' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Dane szczegółowe' /&gt;" Guid="97c96b8e-1079-449c-b593-f496360ba3fe" InformativeScreenshot="a147228cb8ba31829df98d799051ac4a.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/2GmxtSKNUUq2pVTqCgqlPA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="876,90" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="wyszukiwarka-krs.ms.gov.pl" CVScreenId="50848bbd-fe05-4f1e-9167-3dfa3a0803f0" ContentHash="XlSRM2MKfEGpRzhyQU5OCg" CvTextArea="169, 582, 187, 21" CvTextArgument="Określ rodzaj rejestru" CvType="Text" DesignTimeRectangle="170, 579, 186, 24" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' tag='DS-PANEL-HEADER' class='ds-panel-header' aaname='Określ rodzaj rejestru' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Określ rodzaj rejestru' /&gt;" Guid="7d01f262-b044-4e22-b6a9-3cef3016e661" InformativeScreenshot="f57ca5d1a458f9c6d4a3f89db5e10baa.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/8XJVes3CMkaUer-CP8L3qA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 784" BrowserType="Chrome" ContentHash="nQYHL-3H5U6zlu7Q2YBGcQ" IconBase64="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" InformativeScreenshot="0cc62261466e49fe69d617afc9f04957.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/m8orRDyEi0aNAXK8Gpqx1A" Selector="&lt;html app='chrome.exe' url='' /&gt;" Url="[Config(&quot;PRSPageUrl&quot;).ToString]" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

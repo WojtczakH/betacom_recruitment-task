@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome Portal publiczny KRZ - Strona główna",
+  "Type": "App",
+  "Id": "QI4xuVZs10KT0YW2s4ho7w",
+  "Reference": "TuqTgN2Q2UOEIYUA0pIKgQ/QI4xuVZs10KT0YW2s4ho7w",
+  "Created": "2025-11-13T13:08:30.9687892Z",
+  "Updated": "2025-11-13T13:08:30.9687892Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

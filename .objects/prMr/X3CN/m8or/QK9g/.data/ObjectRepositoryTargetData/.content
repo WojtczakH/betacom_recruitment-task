@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="9lCYYqLtEEuz_MPBFeTgfg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="cloud.uipath.com/robot543245company/DefaultTenant/orchestrator_/queues/1160442/transactions(sidepanel:sidepanel/transactions/721271161/details)" CVScreenId="f7b7f7f3-0b52-483f-93ff-d51e93cfef08" CvType="AnyWordGroup" DesignTimeRectangle="349, 470, 586, 34" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' class='p-col-7 p-md-9 border ng-star-inserted' isleaf='1' tag='DIV' matching:class='fuzzy' fuzzylevel:class='0.0' matching:isleaf='fuzzy' fuzzylevel:isleaf='0.0' /&gt;" Guid="1e861c2e-5876-4c3b-85ae-97a826ef25d2" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="f7b7f7f3-0b52-483f-93ff-d51e93cfef08" DesignTimeRectangle="154, 470, 195, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Nazwa' tag='DIV' /&gt;" Guid="9b0c9836-a6d1-47d8-906a-ee9f91352134" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="8bc811207b853a16d62e14bac82a1b17.png" xmlns="">0w-rOpnhYMEyB4sA0J2o5UA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="CBhqJCcCakGTzhmd5RQlRw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="krz.ms.gov.pl" CVScreenId="cb216e89-8d6c-4da8-83cd-9d39528a9c37" DesignTimeRectangle="1267, 685, 86, 34" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='button' aaname=' Akceptuję ' /&gt;" Guid="bf7e1bdb-62cc-4c25-9b02-63237900147a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Strona główna' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="869, 442, 500, 293" FullSelectorArgument="&lt;webctrl class='cookie-info' tag='DIV' /&gt;" Guid="b9f4334e-dd47-4053-821d-8a2a0376d477" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="cf1057935392598333ba77041ba927bf.png" xmlns="">08h5UUwBiFUa6YyDWhiDPLQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

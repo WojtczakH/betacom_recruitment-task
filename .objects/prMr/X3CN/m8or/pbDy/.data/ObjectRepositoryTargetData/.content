@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="eY0f-66BjkqIRO4Yi3IRhg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="wyszukiwarka-krs.ms.gov.pl/dane-szczegolowe-podmiotu;numerKRS=0Qk1aZoqFcGKHlpSLFfmkA%3D%3D;typ=P" CVScreenId="2d1f3107-50fe-4dfa-98d8-ac2ef17a683c" CvElementArea="347, 481, 589, 50" CvType="InputBox" DesignTimeRectangle="349, 482, 586, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='DIV' type='' class='p-col-7 p-md-9 border ng-star-inserted' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="205f7209-8342-406f-98c9-ef494f31c241" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="154, 482, 195, 50" ElementType="Text" FuzzySelectorArgument="&lt;webctrl type='' class='p-col-5 p-md-3 title--bg-color border ng-star-inserted' isleaf='1' tag='DIV' aaname='Data wpisu do Rejestru Przedsiębiorców' matching:class='fuzzy' fuzzylevel:class='0.0' matching:isleaf='fuzzy' fuzzylevel:isleaf='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Data wpisu do Rejestru Przedsiębiorców' /&gt;" Guid="dd4514e2-cab7-44ff-8824-bc24f881540e" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="ae548caf1467f65290934333732ab37d.png" xmlns="">0uxYx3Zg-XUSu4dbg1Xe6oA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

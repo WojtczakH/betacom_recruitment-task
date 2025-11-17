@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="npK7x4lZoESdbXRoqXufSg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="krz.ms.gov.pl" CVScreenId="030f9d0b-900a-4040-92b2-9bedd6cc8a62" CvElementArea="274, 564, 342, 34" CvType="InputBox" DesignTimeRectangle="276, 616, 340, 32" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl idx='2' tag='IFRAME' /&gt;&lt;webctrl id='inny_id' tag='INPUT' /&gt;" Guid="f88c1509-a38f-4b30-b8fb-ee78806e3530" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Wyszukiwanie podmiotów' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="276, 590, 340, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl idx='2' tag='IFRAME' /&gt;&lt;webctrl aaname='Identyfikator (KRS, NIP lub inny identyfikator)' tag='LABEL' /&gt;" Guid="d1e32661-2534-4cb8-9f85-9c13216cb7b5" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <TargetAnchorable.PointOffset>
+        <PointOffset X="2" Y="-6" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="993e894c9d0f6be246ca082781b24956.png" xmlns="">09NXSdApyaEST2nSTrmNHUg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

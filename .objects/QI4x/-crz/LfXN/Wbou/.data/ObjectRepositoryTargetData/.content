@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="dENBbb6GE0uukEDec4upWA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="krz.ms.gov.pl" CVScreenId="9ca68f5f-6aa3-45ce-aa1b-a28cf85ac735" DesignTimeRectangle="300, 624, 429, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl idx='2' tag='IFRAME' /&gt;&lt;webctrl aria-role='alert' tag='SPAN' /&gt;" Guid="1294778e-096f-488f-b441-9afe269542ab" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Wyszukiwanie podmiotów' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="9ca68f5f-6aa3-45ce-aa1b-a28cf85ac735" CvElementArea="267, 623, 24, 22" CvType="Icon" DesignTimeRectangle="268, 624, 32, 20" FullSelectorArgument="&lt;webctrl idx='2' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-rejestr-krz-view&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p-messages&amp;gt;div&amp;gt;span' isleaf='1' tag='SPAN' /&gt;" Guid="95cfef16-5e38-47f0-a9bf-f3ab36de19a6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAYCAYAAACSuF9OAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGdSURBVEhL7ZU/a8JAGIdv69aP4OYX6Nop6FRopVPWaoUu2sGlUwWhg4hudRIq6BaKQ52ySAcxdrFLaOkSFzN0kC4i6PIr0Qu2l39352ApDg+E3Ht3T9573wvBwsZfgrAvds1eKIjhoLfiPwhZGFXiKFTaWHrG5JEXMq+RVwhUJYa26TMuiaSQgW6WQE3FUUgRqNkiJp4YOYaDR9ydHYkJzboJqApBufv+65mNk2EtdCogNH/Cg5OVtJsVA520k60LmHOfeEHWQpf8QpNmnNaNhYl2jpr2jCWtp0LT8MSLIpYhu4rbJEGm5HQWzcwqUxZeSgdQk8fQbZ95AggIsZv+FGJl2bn88AvRY8nXdfqOEVrYGNdjW18DnEKv0HNs4dLWzxbx6ca5BZ+r4suzBh9cQkGtvRxrMMcWVywv0UKeNt8wM27QMdiNt7sGIm/qTZuzY/TIfETdepO5BsKFpvcoh3TObNRA/43NkIPbkQn0puxYOCFCdFHlELVWA31dkNYJMkrwxwQRIkRrZ/VH34LUFT48awcTIrRb9kJRfAN+8y9sEfoUSQAAAABJRU5ErkJggg==" SearchSteps="Selector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="952f5f84a9670013bb8591426a5d5227.png" xmlns="">03qCBE08cF02MJROu20c1jw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

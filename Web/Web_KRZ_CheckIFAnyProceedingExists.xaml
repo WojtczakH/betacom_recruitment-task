@@ -1,0 +1,326 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Web_KRZ_CheckIFAnyProceedingExists" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
+    <x:Property Name="dtExtractedDataFromKRZ" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="boolProceedings" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="1391,2101" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Sprawdz czy jest/bylo prowadzone postepowanie." AttachMode="ByInstance" DisplayName="Chrome Portal publiczny KRZ - Strona główna" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,2078" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="cb11f210-1506-4064-aa3c-500352050916" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1853" sap2010:WorkflowViewState.IdRef="Sequence_25">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="strRodzajPostepowania" />
+              <Variable x:TypeArguments="x:String" Name="strSygnatura" />
+              <Variable x:TypeArguments="x:String" Name="strDataRejestracji" />
+              <Variable x:TypeArguments="x:String" Name="strDataZakonczenia" />
+              <Variable x:TypeArguments="x:String" Name="strStatus" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dtDataFromKRZ" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Użytkowniku,'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="cb11f210-1506-4064-aa3c-500352050916" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Akceptuję'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb11f210-1506-4064-aa3c-500352050916" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="krz.ms.gov.pl" CVScreenId="cb216e89-8d6c-4da8-83cd-9d39528a9c37" ContentHash="CBhqJCcCakGTzhmd5RQlRw" DesignTimeRectangle="1267, 685, 86, 34" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='button' aaname=' Akceptuję ' /&gt;" Guid="bf7e1bdb-62cc-4c25-9b02-63237900147a" InformativeScreenshot="cf1057935392598333ba77041ba927bf.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/ojuWCFG4vkmOq18Pd7IEhw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Strona główna' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="869, 442, 500, 293" FullSelectorArgument="&lt;webctrl class='cookie-info' tag='DIV' /&gt;" Guid="b9f4334e-dd47-4053-821d-8a2a0376d477" SearchSteps="Selector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;Cookies wnd not appeard&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="krz.ms.gov.pl" CVScreenId="cb216e89-8d6c-4da8-83cd-9d39528a9c37" ContentHash="Fm8fSHAufUimC-sf29vhXA" CvTextArea="884, 462, 105, 19" CvTextArgument="Użytkowniku," CvType="Text" DesignTimeRectangle="885, 458, 468, 25" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='leading-text' tag='DIV' /&gt;" Guid="616dd907-7a11-44d3-a6d5-f42985b36c12" InformativeScreenshot="5062b8c4431412a0caf5b3de559dce17.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/N0LwJny58k-HI6e7jLWtsw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Strona główna' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="cb216e89-8d6c-4da8-83cd-9d39528a9c37" CvTextArea="920, 521, 60, 17" CvTextArgument="cookies," CvType="Text" DesignTimeRectangle="920, 518, 56, 22" FuzzySelectorArgument="&lt;webctrl tag='EM' type='' class='' aaname='cookies' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='cookies' /&gt;" Guid="628de0ca-04ac-421c-b8ac-2501a40a2fe2" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Wyszukiwanie podmiotów …'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,194" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb11f210-1506-4064-aa3c-500352050916" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="krz.ms.gov.pl" ContentHash="2J9j0O3F0U2WRIcbOjKdvg" DesignTimeRectangle="516, 590, 300, 129" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl aaname='Wyszukiwanie podmiotów i przeglądanie postępowań' class='btn-desktop' tag='A' /&gt;" Guid="f046350f-b52f-46b6-b5e5-f154c19cf789" InformativeScreenshot="6d0a35fd0020f8385c5eb9d9c78bd062.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/dBv_kd1mB0q1Q3AIndTeTw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Strona główna' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Identyfikator (KRS, NIP…'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,246" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="cb11f210-1506-4064-aa3c-500352050916" Text="[in_TransactionItem.SpecificContent(&quot;KRSNumber&quot;).ToString]" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="krz.ms.gov.pl" CVScreenId="030f9d0b-900a-4040-92b2-9bedd6cc8a62" ContentHash="npK7x4lZoESdbXRoqXufSg" CvElementArea="274, 564, 342, 34" CvType="InputBox" DesignTimeRectangle="276, 616, 340, 32" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl idx='2' tag='IFRAME' /&gt;&lt;webctrl id='inny_id' tag='INPUT' /&gt;" Guid="f88c1509-a38f-4b30-b8fb-ee78806e3530" InformativeScreenshot="993e894c9d0f6be246ca082781b24956.png" IsResponsive="True" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/ErHxq1O_2Uqvs6PRhSBkcA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Wyszukiwanie podmiotów' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="276, 590, 340, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl idx='2' tag='IFRAME' /&gt;&lt;webctrl aaname='Identyfikator (KRS, NIP lub inny identyfikator)' tag='LABEL' /&gt;" Guid="d1e32661-2534-4cb8-9f85-9c13216cb7b5" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset X="2" Y="-6" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Wyszukaj'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,194" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb11f210-1506-4064-aa3c-500352050916" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="krz.ms.gov.pl" CVScreenId="4436df32-afcd-465c-984f-291080125949" ContentHash="MCXkgYIQqU6c97pHQGvnag" DesignTimeRectangle="1252, 630, 89, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl parentid='butoonWyszukajMobile' tag='SPAN' type='' class='ui-button-text ui-clickable' aaname='Wyszukaj' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e8fa1d9e-fd50-4306-b9b9-3cd86dc7903f" InformativeScreenshot="88266a4ec7bb9805f969d23ea6d09c4d.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/H9OmCksbhkaFueW4VqsvKQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Wyszukiwanie podmiotów' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="04bed715-5990-4a03-91a3-e1b4e629657b" CvElementArea="1153, 629, 84, 35" CvTextArea="1168, 639, 52, 16" CvTextArgument="Wyczyść" CvType="Button" DesignTimeRectangle="1155, 630, 79, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl idx='2' tag='IFRAME' /&gt;&lt;webctrl parentid='butoonWyczyscMobile' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl parentid='butoonWyczyscMobile' tag='SPAN' type='' class='ui-button-text ui-clickable' aaname='Wyczyść' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Wyczyść' /&gt;" Guid="fd0e6f86-a32b-45b4-b81c-a183758897d9" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State 'Nie zostały znalezione …'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1102" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="cb11f210-1506-4064-aa3c-500352050916" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,401" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="boolLackOfProceedings" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Pop up 'brak postepowan' appeard&quot;]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[boolProceedings]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">[False]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,416" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Int32" Default="0" Name="intCounterInterationIndex" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dtExtractedDataFromKRZ]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Rodzaj postępowania' ReferenceIdx='0' Name='Rodzaj postępowania'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Sygnatura' ReferenceIdx='1' Name='Sygnatura'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Sygnatura Url' ReferenceIdx='2' Name='Sygnatura Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Data rejestracji' ReferenceIdx='3' Name='Data rejestracji'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Data zakończenia' ReferenceIdx='4' Name='Data zakończenia'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Status' ReferenceIdx='5' Name='Status'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Rodzaj postępowania' attr='fulltext' /&gt;&lt;column name='Sygnatura' attr='fulltext' name2='Sygnatura Url' attr2='href' /&gt;&lt;column name='Data rejestracji' attr='fulltext' /&gt;&lt;column name='Data zakończenia' attr='fulltext' /&gt;&lt;column name='Status' attr='fulltext' /&gt;&lt;/extract-table&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,190" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="cb11f210-1506-4064-aa3c-500352050916" Version="V5">
+                    <uix:NExtractData.Target>
+                      <uix:TargetAnchorable BrowserURL="https://krz.ms.gov.pl/#!/application/KRZPortalPUB/1.9/KrzRejPubGui.WyszukiwaniePodmiotow?params=JTdCJTdE&amp;seq=1" DesignTimeRectangle="301, 356, 999, 131" FullSelectorArgument="&lt;webctrl idx='*' tag='IFRAME' /&gt;&lt;webctrl aaname='Rodzaj postępowania Sygnatura Data rejestracji Data zakończenia Status' tag='TABLE' /&gt;" Guid="944f8195-532e-4162-ac2f-49d591f60ad7" InformativeScreenshot="a1b63bd7bbbcf78b71ff3b28d6db1ef3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Wyszukiwanie podmiotów' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NExtractData.Target>
+                  </uix:NExtractData>
+                  <Assign sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[boolProceedings]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="krz.ms.gov.pl" CVScreenId="9ca68f5f-6aa3-45ce-aa1b-a28cf85ac735" ContentHash="dENBbb6GE0uukEDec4upWA" DesignTimeRectangle="300, 624, 429, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl idx='2' tag='IFRAME' /&gt;&lt;webctrl aria-role='alert' tag='SPAN' /&gt;" Guid="1294778e-096f-488f-b441-9afe269542ab" InformativeScreenshot="952f5f84a9670013bb8591426a5d5227.png" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/WboupbI0rk2I84F2rgQIbg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Wyszukiwanie podmiotów' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="9ca68f5f-6aa3-45ce-aa1b-a28cf85ac735" CvElementArea="267, 623, 24, 22" CvType="Icon" DesignTimeRectangle="268, 624, 32, 20" FullSelectorArgument="&lt;webctrl idx='2' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-rejestr-krz-view&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p-messages&amp;gt;div&amp;gt;span' isleaf='1' tag='SPAN' /&gt;" Guid="95cfef16-5e38-47f0-a9bf-f3ab36de19a6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAYCAYAAACSuF9OAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGdSURBVEhL7ZU/a8JAGIdv69aP4OYX6Nop6FRopVPWaoUu2sGlUwWhg4hudRIq6BaKQ52ySAcxdrFLaOkSFzN0kC4i6PIr0Qu2l39352ApDg+E3Ht3T9573wvBwsZfgrAvds1eKIjhoLfiPwhZGFXiKFTaWHrG5JEXMq+RVwhUJYa26TMuiaSQgW6WQE3FUUgRqNkiJp4YOYaDR9ydHYkJzboJqApBufv+65mNk2EtdCogNH/Cg5OVtJsVA520k60LmHOfeEHWQpf8QpNmnNaNhYl2jpr2jCWtp0LT8MSLIpYhu4rbJEGm5HQWzcwqUxZeSgdQk8fQbZ95AggIsZv+FGJl2bn88AvRY8nXdfqOEVrYGNdjW18DnEKv0HNs4dLWzxbx6ca5BZ+r4suzBh9cQkGtvRxrMMcWVywv0UKeNt8wM27QMdiNt7sGIm/qTZuzY/TIfETdepO5BsKFpvcoh3TObNRA/43NkIPbkQn0puxYOCFCdFHlELVWA31dkNYJMkrwxwQRIkRrZ/VH34LUFT48awcTIrRb9kJRfAN+8y9sEfoUSQAAAABJRU5ErkJggg==" SearchSteps="Selector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 784" BrowserType="Chrome" ContentHash="4Fyf2N2sq0S1dBbNFvuB7g" IconBase64="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" InformativeScreenshot="9abde2cc7e8de57ffd7c61362785b3ba.jpg" Reference="TuqTgN2Q2UOEIYUA0pIKgQ/LfXNBFbq2UaIxNLel0boyw" Selector="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Strona główna' /&gt;" Url="[Config(&quot;KRZPageUrl&quot;).ToString]" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

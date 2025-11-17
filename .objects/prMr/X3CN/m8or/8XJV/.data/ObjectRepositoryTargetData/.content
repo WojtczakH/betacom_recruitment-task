@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="XlSRM2MKfEGpRzhyQU5OCg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="wyszukiwarka-krs.ms.gov.pl" CVScreenId="50848bbd-fe05-4f1e-9167-3dfa3a0803f0" CvTextArea="169, 582, 187, 21" CvTextArgument="Określ rodzaj rejestru" CvType="Text" DesignTimeRectangle="170, 579, 186, 24" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' tag='DS-PANEL-HEADER' class='ds-panel-header' aaname='Określ rodzaj rejestru' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Określ rodzaj rejestru' /&gt;" Guid="7d01f262-b044-4e22-b6a9-3cef3016e661" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="f57ca5d1a458f9c6d4a3f89db5e10baa.png" xmlns="">0owajGTgdoEuqfsCFv2GWaw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

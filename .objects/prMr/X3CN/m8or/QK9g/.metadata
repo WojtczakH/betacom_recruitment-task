@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Get Text strNazwaPodmiotu",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "QK9gJY1mhESmm7eQEUQ-IQ",
+  "Reference": "TuqTgN2Q2UOEIYUA0pIKgQ/QK9gJY1mhESmm7eQEUQ-IQ",
+  "ParentRef": "TuqTgN2Q2UOEIYUA0pIKgQ/m8orRDyEi0aNAXK8Gpqx1A",
+  "Created": "2025-11-13T09:26:11.461854Z",
+  "Updated": "2025-11-13T09:26:11.461854Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

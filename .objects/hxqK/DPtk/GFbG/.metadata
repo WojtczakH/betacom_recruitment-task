@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Portal publiczny KRZ - Wyszukiwanie po",
+  "Type": "Screen",
+  "Id": "GFbGNafGzEWn5wBhPQEwCw",
+  "Reference": "TuqTgN2Q2UOEIYUA0pIKgQ/GFbGNafGzEWn5wBhPQEwCw",
+  "ParentRef": "TuqTgN2Q2UOEIYUA0pIKgQ/DPtkYVDgqUyRStU9Kq7XeA",
+  "Created": "2025-11-14T08:04:40.4050237Z",
+  "Updated": "2025-11-14T08:04:40.4050237Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

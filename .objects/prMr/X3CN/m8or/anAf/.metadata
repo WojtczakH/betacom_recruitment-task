@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Get Text strFormaPrawna",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "anAfhW3b3EGNlTBjneFE_w",
+  "Reference": "TuqTgN2Q2UOEIYUA0pIKgQ/anAfhW3b3EGNlTBjneFE_w",
+  "ParentRef": "TuqTgN2Q2UOEIYUA0pIKgQ/m8orRDyEi0aNAXK8Gpqx1A",
+  "Created": "2025-11-13T09:40:09.045785Z",
+  "Updated": "2025-11-13T09:40:09.045785Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

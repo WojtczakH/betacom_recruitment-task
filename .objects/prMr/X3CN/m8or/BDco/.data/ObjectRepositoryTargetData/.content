@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="OsWCcvNJIkK4ADJFW47TPQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="wyszukiwarka-krs.ms.gov.pl/dane-szczegolowe-podmiotu;numerKRS=0Qk1aZoqFcGKHlpSLFfmkA%3D%3D;typ=P" CVScreenId="5b302647-4f22-4c3a-894e-678bfe2c1224" CvType="AnyWordGroup" DesignTimeRectangle="349, 572, 586, 34" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='*' tag='DIV' /&gt;" Guid="577baeaa-1f3a-41ef-b93c-176a3d8bab7d" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wyszukiwarka KRS' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="5b302647-4f22-4c3a-894e-678bfe2c1224" CvTextArea="162, 582, 25, 13" CvTextArgument="NIP" CvType="Text" DesignTimeRectangle="154, 572, 195, 34" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='NIP' tag='DIV' type='' class='p-col-5 p-md-3 title--bg-color border ng-star-inserted' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='NIP' /&gt;" Guid="b59901d6-46f7-4c09-84e8-80eff423e8b9" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="b978605b51c92143fa30fe8e6a981e6b.png" xmlns="">0KQG-Wz-pJ02UjVzvbLT95A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
